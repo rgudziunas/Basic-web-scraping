@@ -1,6 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import sys
+import pandas as pd
 
 sys.stdout.reconfigure(encoding='utf-8')
 
@@ -26,7 +27,6 @@ titles = [title.text.strip() for title in titles]
 
 print(titles)
 
-import pandas as pd
 
 df = pd.DataFrame(columns=titles)
 print(df)
